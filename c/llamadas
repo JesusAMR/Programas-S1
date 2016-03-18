@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+    int i;
+    printf("Inserte la clave\n");
+    scanf("%d",&i);
+    switch(i){
+        case 12: printf("America del Norte %d",i);
+        default: break;
+    }
+    getch()
+    return 0;
+}

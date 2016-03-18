@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    int x= 10,y=5;
+    double xx=5.5,yy=1.6;
+    printf("Funcion modf:%d",modf(xx,yy))
+    getch();
+    return 0;
+}

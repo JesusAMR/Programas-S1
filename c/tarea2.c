@@ -1,0 +1,1 @@
+//un arreglo de 10 elementos, ordenar de menor a mayor mostart pantalla, mayor a meno mostrar pantalla, sacar promedio, mayor de todos y menor de todos.

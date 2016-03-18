@@ -1,0 +1,10 @@
+#include<stdio.h>
+char tumadremin(char c){
+    c=c+32;
+    return c;
+}
+int main(){
+    char d = tumadremin("X");
+    printf("%c",d);
+    return 0;
+}

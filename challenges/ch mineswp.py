@@ -26,15 +26,28 @@ try:
 finally:
     fil.close()
 """
+def Tests(File):
+    i=0
+    for line in File:
+        if line.replace(" ","").replace("\n","").isdigit():
+            i+=1
+        else:
+            pass
+    return i
 def start(File):
     d=clean(File)
+    n=Tests(d)
     u=getListRange(d)
-    makeListReady(d,u)
-    print u
+    r=makeListReady(d,u)
+    s= countAsterCol(r)
+    s=map(str,s)
+    for line in s:
+        print line
 def clean(File):
     for i,line in enumerate(File):
         x=line.replace("\n","")
         File[i]=x
+    #print File
     return File
 def getListRange(List):
     u=List.pop(0).split()
@@ -42,12 +55,32 @@ def getListRange(List):
     return u
 def makeListReady(first,sec):
     mat=[[0 for x in xrange(sec[1])]for x in xrange(sec[0])]
-    print mat
-    print first
+    #print mat
+    #print first
     for x in xrange(0,sec[0]):
         for i in xrange(0,sec[1]):
             mat[x][i]=first[x][i]
-    print mat
+    return mat
+def countAsterCol(File):
+    for x in xrange(0,len(File)):
+        for i in xrange(0,len(File[0])):
+            if File[x][i]!= '*':
+                File[x][i]=0
+            else:
+                pass
+    for x in xrange(0,len(File)):
+        for i in xrange(0,len(File[0])):
+            if File[x][i]== '*':
+                File[x][i+1]+=1
+                File[x+1][i]+=1
+                File[x+1][i+1]+=1
+                if not i==0:
+                    File[x][i-1]+=1
+            else:
+                pass
+    return File
+
+            
 start(listt)
 '''
 d=clean(listt)
