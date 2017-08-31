@@ -1,6 +1,6 @@
 import urllib
 import re
-urls=['https://www.google.com','https://www.reddit.com/r/gonewild','https://developer.riotgames.com/']
+urls=['https://www.google.com','https://www.reddit.com/r/','https://developer.riotgames.com/']
 regex='<title>(.+?)</title>'
 pattern = re.compile(regex)
 for url in urls:
